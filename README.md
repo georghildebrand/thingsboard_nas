@@ -32,3 +32,10 @@ services:
 # networks:
 #   eth0
 ```
+
+Test:
+Get hostname and token from the thingsboard gui.
+
+```bash
+curl -v -X POST -d "{\"temperature\": 25}" $HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+```
